@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -195,7 +196,108 @@
 
     <!--Finaliza  ORADOR-->
 
+<!--Comienza la parte del ticket-->
+<article id="comprar_tiket" class="container my-4" style="max-width: 50rem;">
 
+  <header class="text-center">
+
+    <div class="card-group">
+
+      <div class="card mx-1 border border-primary" style="min-width:10rem; min-height:10rem;">
+        <div class="card-body">
+          <h5 class="card-title display-6"><b>Estudiante</b></h5>
+          <p class="card-text">Tienen un descuento</p>          
+          <p class="card-text"><b>80%</b></p>
+          <small class="text-muted">* Presentar documentación</small>
+        </div>
+      </div>
+
+      <div class="card mx-1 border border-primary" style="min-width: 10rem; min-height: 10rem;">
+        <div class="card-body">
+          <h5 class="card-title display-6"><b>Trainee</b></h5>
+          <p class="card-text">Tienen un descuento</p>          
+          <p class="card-text"><b>50%</b></p>
+          <small class="text-muted">* Presentar documentación</small>
+        </div>
+      </div>
+
+      <div class="card mx-1 border border-warning" style="min-width:10rem; min-height:10rem;">
+        <div class="card-body">
+          <h5 class="card-title display-6"><b>Junior</b></h5>
+          <p class="card-text">Tienen un descuento</p>          
+          <p class="card-text"><b>15%</b></p>
+          <small class="text-muted">* Presentar documentación</small>
+        </div>
+      </div>            
+
+    </div>
+ 
+   
+  <br>
+
+  <center> <h3>VALOR DEL TIKET $<span id="precio">200</span></h3></center>
+
+
+  <fieldset class="bordeVentas">
+  
+
+  <form action="#" method="post">
+
+    <fieldset class="row">  
+      <div class="col-md m-1">
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required maxlength="30" class="form-control">
+      </div>          
+      <div class="col-md m-1">
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" required maxlength="30" class="form-control">
+      </div>  
+    </fieldset>  
+    
+    <fieldset class="row">  
+      <div class="col-md m-1">
+        <input type="email" name="email" id="email" placeholder="Correo" pattern="^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" class="form-control">
+      </div>  
+    </fieldset>  
+    
+    <fieldset class="row text-start">  
+      <div class="col-md m-1">
+        <label for="cantidad" class="form-label">Cantidad</label>
+        <input type="number" name="cantidad" id="cantidad" min="1" step="1" required class="form-control m-1 ">
+      </div>  
+      <div class="col-md m-1">
+        <label for="cantidad" class="form-label">Categoría</label>
+        <select class="form-select" name="categoria" id="categoria" >
+          <option selected value="1">Sin descuento</option>
+          <option value=".8">Estudiante</option>
+          <option value=".5">Trainee</option>
+          <option value=".15">Junior</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="row text-start">  
+      <div class="col-md m-1">
+        <p class="alert alert-info" role="alert"><b> Total a pagar $: </b> <span id="total"></span></p>
+      </div>
+    </fieldset>
+
+    <fieldset class="row text-start d-none">
+
+      <p id="mensaje" class="text-danger text-center"></p>
+
+    </fieldset>
+
+    <fieldset class="row">
+      <div class="col-md m-1">
+        <button class="btn w-100 color-pass-ticket" id="vaciar" type="reset">Borrar</button>
+      </div>
+      <div class="col-md m-1">
+        <button class="btn w-100 color-pass-ticket" id="resumen" type="button">Resumen</button>        
+      </div>
+    </fieldset>        
+    
+  </form>      
+
+</article>    <!--FIN la parte del ticket-->   
 
   </main>
 
